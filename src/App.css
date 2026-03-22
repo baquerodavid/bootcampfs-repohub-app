@@ -1,0 +1,31 @@
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 24px 0;
+}
+
+h1 {
+  font-size: var(--heading1-size);
+}
+
+h2 {
+  font-size: var(--heading2-size);
+}
+
+h3 {
+  font-size: var(--heading3-size);
+}
+
+.divider {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+}
+
+.warning {
+  font-size: var(text-large-size);
+  color: var(--warning-color)
+}

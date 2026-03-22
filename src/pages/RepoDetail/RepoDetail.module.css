@@ -1,0 +1,39 @@
+.containerBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btnPrimary {
+  padding: 6px 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.btnPrimary:hover, .btnSecondary:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+.btnSecondary {
+  padding: 6px 12px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+}
+
+.containerChips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.chips {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  color: var(--text-muted);
+  font-size: .8rem;
+}
