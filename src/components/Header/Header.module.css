@@ -1,0 +1,10 @@
+.header {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--heading3-size);
+  color: var(--text-h);
+  padding: 24px 16px;
+}

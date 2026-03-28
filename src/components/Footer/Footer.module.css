@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--text-regular-size);
+  font-weight: var(--text-regular-weight);
+  padding: 24px 16px;
+  border-top: 2px solid var(--borderSecondary);
+}
+
+.footer a:hover {
+  opacity: .6;
+}
+
+.primaryFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.secondaryFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}

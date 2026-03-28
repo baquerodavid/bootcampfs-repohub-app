@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./RepoCard.module.css";
+import linkExt from "../../assets/linkExt_white.svg";
 
 function RepoCard({repo}) {
   return (
@@ -14,10 +15,14 @@ function RepoCard({repo}) {
       <div className="divider"></div>
       <div className={styles.containerBtn}>
         <Link to={repo.urlRepo} target="_blank">
-          <button className={styles.btnPrimary}>Link Repo</button>
+          <button className={styles.btnPrimary}>
+            Link Repo <img src={linkExt} alt="Link Externo" width={16} />
+          </button>
         </Link>
         <Link to={repo.urlApp} target="_blank">
-          <button className={styles.btnPrimary}>Link App</button>
+          <button className={styles.btnPrimary}>
+            Link App <img src={linkExt} alt="Link Externo" width={16} />
+          </button>
         </Link>
       </div>
       <div className={styles.containerChips}>
