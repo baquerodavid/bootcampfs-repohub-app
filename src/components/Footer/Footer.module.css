@@ -7,7 +7,7 @@
   font-size: var(--text-regular-size);
   font-weight: var(--text-regular-weight);
   padding: 24px 16px;
-  border-top: 2px solid var(--borderSecondary);
+  border-top: 2px solid var(--text-dark-color);
 }
 
 .footer a:hover {

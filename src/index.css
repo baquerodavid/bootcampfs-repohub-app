@@ -7,10 +7,9 @@
   --text-light-color: #FFFFFF;
   --text-muted: #9ca3af;
   --primary-color: #32A8E6;
-  --primary-hover-color: #1E90D6;
+  --primary-hover-color: #0483d2;
   --secondary-color: #8B5CF6;
   --secondary-hover-color: #7C3AED;
-  --error-hover-color: #d43333;
   --heading1-size: 3rem;
   --heading2-size: 2rem;
   --heading3-size: 1.5rem;
@@ -26,7 +25,6 @@
   
   --text-h: #F9FAFB;
   --border: #2e303a;
-  --borderSecondary:#3a3b3f;
 }
 
 /* styles/reset.css */

@@ -25,5 +25,7 @@ h3 {
 
 .warning {
   font-size: var(text-large-size);
-  color: var(--warning-color)
+  color: var(--warning-color);
+  margin: 12px;
+  text-align: center;
 }
