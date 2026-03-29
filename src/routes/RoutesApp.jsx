@@ -11,7 +11,7 @@ function RoutesApp() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route
-          path="/bootcamp-repos/:_id"
+          path="/bootcamp-repos/:slug"
           element={<RepoDetail />}
         ></Route>
       </Routes>

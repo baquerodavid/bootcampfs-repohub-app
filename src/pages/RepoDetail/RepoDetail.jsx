@@ -8,13 +8,13 @@ function RepoDetail() {
   const urlRepo =
     import.meta.env.VITE_APP_API_URL + 'bootcamp-repos/' ||
     'http://localhost:3000/bootcamp-repos/';
-  const { _id } = useParams();
+  const { slug } = useParams();
 
   useEffect(() => {
     const fetchRepo = async () => {
       try {
-        const response = await fetch(urlRepo + `${_id}`);
-        
+        const response = await fetch(urlRepo + `${slug}`);
+
         if (!response.ok) {
           throw new Error('Repositorio no encontrado');
         }
@@ -27,7 +27,7 @@ function RepoDetail() {
       }
     };
     fetchRepo();
-  }, [_id, urlRepo])
+  }, [slug, urlRepo]);
 
   return (
     <main className={styles.repoDetail}>

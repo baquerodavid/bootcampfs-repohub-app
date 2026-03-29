@@ -36,7 +36,7 @@ function RepoCard({repo}) {
         )}
       </div>
       
-      <Link to={'/bootcamp-repos/' + repo._id} className={styles.btnSecondary}>
+      <Link to={'/bootcamp-repos/' + repo.slug} className={styles.btnSecondary}>
         Ver más →
       </Link>
     </article>
