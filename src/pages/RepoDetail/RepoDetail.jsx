@@ -5,7 +5,9 @@ import styles from "./RepoDetail.module.css";
 
 function RepoDetail() {
   const [repo, setRepo] = useState('');
-  const urlRepo = 'http://localhost:3000/bootcamp-repos/';
+  const urlRepo =
+    import.meta.env.VITE_APP_API_URL + 'bootcamp-repos/' ||
+    'http://localhost:3000/bootcamp-repos/';
   const { _id } = useParams();
 
   useEffect(() => {
@@ -25,7 +27,7 @@ function RepoDetail() {
       }
     };
     fetchRepo();
-  }, [_id])
+  }, [_id, urlRepo])
 
   return (
     <main className={styles.repoDetail}>

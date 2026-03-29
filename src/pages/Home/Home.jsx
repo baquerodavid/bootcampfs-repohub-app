@@ -7,8 +7,7 @@ function Home() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchRepo, setSearchRepo] = useState('');
-  // const urlRepo = import.meta.env.VITE_APP_API_URL || 'http://localhost:3000/';
-  const urlRepo = 'http://localhost:3000/';
+  const urlRepo = import.meta.env.VITE_APP_API_URL || 'http://localhost:3000/';
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -30,7 +29,7 @@ function Home() {
       }
     };
     fetchRepos();
-  }, []);
+  }, [urlRepo]);
 
   const filteredRepos = repos.filter((repo) => {
     const { title, summary, description, tags, keyLearning, takeaways } = repo;
@@ -76,7 +75,13 @@ function Home() {
           <h2>Listado de Repositorios</h2>
           <div className={styles.container}>
             {loading === true ? (
-              <div className="warning">Cargando...</div>
+              <div>
+                <p className="warning">Cargando...</p>
+                <p className="warning">
+                  Ten paciencia 🙏 La primera vez son unos segundos hasta que se ponga en
+                  marcha Render.
+                </p>
+              </div>
             ) : filteredRepos.length > 0 ? (
               filteredRepos.map((repo) => (
                 <RepoCard key={repo._id} repo={repo} />

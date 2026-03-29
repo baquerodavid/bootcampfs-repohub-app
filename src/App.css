@@ -41,7 +41,7 @@ p {
 }
 
 .warning {
-  font-size: var(text-large-size);
+  font-size: var(--text-large-size);
   color: var(--warning-color);
   margin: 12px;
   text-align: center;
