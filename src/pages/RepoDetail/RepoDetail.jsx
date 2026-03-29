@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./RepoDetail.module.css"
+import linkExt from "../../assets/linkExt_white.svg";
+import styles from "./RepoDetail.module.css";
 
 function RepoDetail() {
   const [repo, setRepo] = useState('');
@@ -27,38 +28,47 @@ function RepoDetail() {
   }, [_id])
 
   return (
-    <main>
-      <section>
+    <main className={styles.repoDetail}>
+      <section className={`${styles.section} ${styles.repoDetailHeading}`}>
         <h1>{repo.title}</h1>
         <p>{repo.description}</p>
       </section>
-      <div className="divider"></div>
-      <section>
+
+      <section className={`${styles.section} ${styles.takeaways}`}>
         <h3>Takeaways</h3>
-        {repo.takeaways?.map((takeaway, takeawayIndex) => (
-          <p key={takeawayIndex}>{takeaway}</p>
-        ))}
+        <ul className={styles.takeawaysList}>
+          {repo.takeaways?.map((takeaway, takeawayIndex) => (
+            <li key={takeawayIndex}>{takeaway}</li>
+          ))}
+        </ul>
       </section>
-      <div className={styles.keyLearning}>
+
+      <section className={`${styles.section} ${styles.keyLearning}`}>
         <h3>Aprendizaje clave</h3>
         <p>{repo.keyLearning}</p>
-      </div>
-      <div className="divider"></div>
-      <div className={styles.containerBtn}>
-        <a href={repo.urlRepo} target="_blank">
-          <button className={styles.btnPrimary}>Link Repo</button>
+      </section>
+
+      <section className={`${styles.section} ${styles.techStack}`}>
+        <h3>Tecnologías</h3>
+        <div className={styles.containerChips}>
+          {repo.tags?.map((tag, tagIndex) => (
+            <span key={tagIndex} className={styles.chips}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.containerBtn}`}>
+        <a href={repo.urlRepo} target="_blank" className={styles.btnPrimary}>
+          Link Repo <img src={linkExt} alt="Link Externo" width={16} />
         </a>
-        <a href={repo.urlApp} target="_blank">
-          <button className={styles.btnPrimary}>Link App</button>
-        </a>
-      </div>
-      <div className={styles.containerChips}>
-        {repo.tags?.map((tag, tagIndex) => (
-          <span key={tagIndex} className={styles.chips}>
-            {tag}
-          </span>
-        ))}
-      </div>
+        {repo.urlApp && (
+          <a href={repo.urlApp} target="_blank" className={styles.btnPrimary}>
+              Link App <img src={linkExt} alt="Link Externo" width={16} />
+          </a>
+        )}
+      </section>
     </main>
   );
 }

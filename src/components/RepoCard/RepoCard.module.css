@@ -1,18 +1,20 @@
 .repoCard {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   min-height: 550px;
-  padding: 16px;
-  border: 1px solid var(--bg-light);
+  padding: var(--container-padding);
+  border: 1px solid var(--border);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   background-color: #1d1f27;
   transition: all 0.2s ease-in-out;
 }
 
 .repoCard:hover {
   transform: scale(1.02);
+  border-color: var(--primary-color);
 }
 
 .repoCard h4 {
@@ -25,23 +27,26 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .btnPrimary {
-  padding: 6px 12px;
+  padding: 0.4rem 0.75rem;
   border-radius: 8px;
   border: 1px solid var(--primary-color);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   background: var(--primary-color);
   color: var(--text-light-color);
   font-weight: var(--text-bold-weight);
+  transition: all 0.2s ease;
 }
 
 .btnPrimary:hover {
   cursor: pointer;
   background: var(--primary-hover-color);
+  box-shadow: 0 0 0 3px rgba(50, 168, 230, 0.25);
 }
 
 .btnPrimary img {
@@ -49,13 +54,17 @@
 }
 
 .btnSecondary {
-  padding: 6px 12px;
+  padding: 0.4rem 0.75rem;
   border-radius: 8px;
-  background: var(--border);
+  background: transparent;
   border: 1px solid var(--border);
   color: var(--text-h);
   width: 100%;
   font-weight: var(--text-bold-weight);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
 }
 
 .btnSecondary:hover {
@@ -66,21 +75,33 @@
 .containerChips {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .chips {
-  padding: 4px 12px;
+  padding: 0.25rem 0.75rem;
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 999px;
   color: var(--text-muted);
-  font-size: .8rem;
+  font-size: 0.75rem;
 }
 
 .keyLearning {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .repoCard {
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .repoCard {
+    max-width: 360px;
+  }
 }

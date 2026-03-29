@@ -4,17 +4,34 @@ body {
 
 h1 {
   font-size: var(--heading1-size);
+  font-weight: var(--heading-weight);
   color: var(--text-h);
+  line-height: 1.1;
 }
 
 h2 {
   font-size: var(--heading2-size);
+  font-weight: var(--heading-weight);
   color: var(--text-h);
+  line-height: 1.15;
 }
 
 h3 {
   font-size: var(--heading3-size);
+  font-weight: var(--heading-weight);
   color: var(--text-h);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: var(--heading4-size);
+  font-weight: var(--heading-weight);
+  color: var(--text-h);
+  line-height: 1.25;
+}
+
+p {
+  font-size: var(--text-regular-size);
 }
 
 .divider {

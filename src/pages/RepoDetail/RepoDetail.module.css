@@ -1,39 +1,140 @@
-.containerBtn {
+.repoDetail {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--section-spacing) var(--container-padding);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: column;
+  gap: 0;
 }
 
-.btnPrimary {
-  padding: 6px 12px;
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
+.section {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.btnPrimary:hover, .btnSecondary:hover {
-  cursor: pointer;
-  opacity: .6;
+.repoDetailHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 0.5rem;
 }
 
-.btnSecondary {
-  padding: 6px 12px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 8px;
+.repoDetailHeading h1 {
+  line-height: 1.1;
+}
+
+.repoDetailHeading p {
+  color: var(--text-light-color);
+  font-size: var(--text-regular-size);
+  line-height: 1.8;
+  max-width: 75ch;
+}
+
+.takeaways,
+.keyLearning,
+.techStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.takeaways h3,
+.keyLearning h3,
+.techStack h3 {
+  margin: 0;
+}
+
+.takeawaysList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.takeawaysList li {
+  color: var(--text-light-color);
+  line-height: 1.7;
+}
+
+.keyLearning p {
+  color: var(--text-light-color);
+  line-height: 1.8;
 }
 
 .containerChips {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: 0.75rem;
 }
 
 .chips {
-  padding: 4px 12px;
+  padding: 0.35rem 0.85rem;
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 999px;
   color: var(--text-muted);
-  font-size: .8rem;
+  font-size: 0.9rem;
+  background-color: #1d1f27;
+}
+
+.containerBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: none;
+}
+
+.btnPrimary {
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: var(--text-light-color);
+  font-weight: var(--text-bold-weight);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnPrimary:hover {
+  cursor: pointer;
+  background: var(--primary-hover-color);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(50, 168, 230, 0.25);
+}
+
+.btnPrimary img {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 2rem 0;
+  }
+
+  .repoDetailHeading {
+    gap: 1.25rem;
+  }
+
+  .containerBtn {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .repoDetail {
+    max-width: 960px;
+  }
+
+  .repoDetailHeading p,
+  .takeawaysList li,
+  .keyLearning p {
+    font-size: 1.05rem;
+  }
 }

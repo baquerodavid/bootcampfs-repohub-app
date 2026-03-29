@@ -4,27 +4,19 @@ import linkExt from "../../assets/linkExt_white.svg";
 
 function RepoCard({repo}) {
   return (
-    <div className={styles.repoCard}>
-      <h4>{repo.title}</h4>
+    <article className={styles.repoCard}>
+      <h3>{repo.title}</h3>
       <p>{repo.summary}</p>
+
       <div className="divider"></div>
+      
       <div className={styles.keyLearning}>
-        <h5>Aprendizaje clave</h5>
+        <h4>Aprendizaje clave</h4>
         <p>{repo.keyLearning}</p>
       </div>
+      
       <div className="divider"></div>
-      <div className={styles.containerBtn}>
-        <Link to={repo.urlRepo} target="_blank">
-          <button className={styles.btnPrimary}>
-            Link Repo <img src={linkExt} alt="Link Externo" width={16} />
-          </button>
-        </Link>
-        <Link to={repo.urlApp} target="_blank">
-          <button className={styles.btnPrimary}>
-            Link App <img src={linkExt} alt="Link Externo" width={16} />
-          </button>
-        </Link>
-      </div>
+      
       <div className={styles.containerChips}>
         {repo.tags?.map((tag, tagIndex) => (
           <span key={tagIndex} className={styles.chips}>
@@ -32,10 +24,22 @@ function RepoCard({repo}) {
           </span>
         ))}
       </div>
-      <Link to={'/bootcamp-repos/' + repo._id}>
-        <button className={styles.btnSecondary}>Ver más →</button>
+      
+      <div className={styles.containerBtn}>
+        <a href={repo.urlRepo} target="_blank" className={styles.btnPrimary}>
+          Link Repo <img src={linkExt} alt="" width={16} />
+        </a>
+        {repo.urlApp && (
+          <a href={repo.urlApp} target="_blank" className={styles.btnPrimary}>
+            Link App <img src={linkExt} alt="" width={16} />
+          </a>
+        )}
+      </div>
+      
+      <Link to={'/bootcamp-repos/' + repo._id} className={styles.btnSecondary}>
+        Ver más →
       </Link>
-    </div>
+    </article>
   );
 }
 
