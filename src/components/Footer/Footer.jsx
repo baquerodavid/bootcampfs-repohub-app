@@ -17,15 +17,15 @@ function Footer() {
         <div className={styles.secondaryFooter}>
           <p>
             Desarrollado por{' '}
-            <Link to="https://www.davidbaquero.com/" target="_blank">
+            <a href="https://www.davidbaquero.com/" target="_blank">
               David Baquero
-            </Link>
+            </a>
           </p>
           <p>
             ‧ Project Break 3 · Bootcamp Desarrollo Web Full-Stack ·{' '}
-            <Link to="https://thebridge.tech" target="_blank">
+            <a href="https://thebridge.tech" target="_blank">
               The Bridge
-            </Link>
+            </a>
           </p>
         </div>
       </footer>

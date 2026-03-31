@@ -6,14 +6,14 @@ import styles from "./RepoDetail.module.css";
 function RepoDetail() {
   const [repo, setRepo] = useState('');
   const urlRepo =
-    import.meta.env.VITE_APP_API_URL + 'bootcamp-repos/' ||
-    'http://localhost:3000/bootcamp-repos/';
+    import.meta.env.VITE_APP_API_URL ||
+    'http://localhost:3000/bootcamp-repos';
   const { slug } = useParams();
 
   useEffect(() => {
     const fetchRepo = async () => {
       try {
-        const response = await fetch(urlRepo + `${slug}`);
+        const response = await fetch(urlRepo + `/${slug}`);
 
         if (!response.ok) {
           throw new Error('Repositorio no encontrado');
