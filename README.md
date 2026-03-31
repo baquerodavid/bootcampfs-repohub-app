@@ -111,12 +111,12 @@ Durante el desarrollo se ha priorizado la simplicidad y funcionalidad del MVP, c
 ### Evolución futura
 
 Este frontend está planteado como una base que seguirá creciendo con nuevas funcionalidades:
-	•	Mejora de diseño y experiencia de usuario (UI/UX)
-	•	Integración completa con backend desplegado
-	•	Filtros avanzados y ordenación
-	•	Gestión de estado más compleja (Context o librerías)
-	•	Página de administración
-	•	Optimización de rendimiento
+- Mejora de diseño y experiencia de usuario (UI/UX)
+- Integración completa con backend desplegado
+- Filtros avanzados y ordenación
+- Gestión de estado más compleja (Context o librerías)
+- Página de administración
+- Optimización de rendimiento
 
 ---
 
