@@ -70,11 +70,11 @@ Este frontend consume la API desarrollada en el siguiente repositorio:
 
 Asegúrate de tener el backend levantado en local o desplegado para que las peticiones funcionen correctamente.
 
-Ejemplo de endpoints utilizados:
+### Ejemplo de endpoints utilizados:
 
-GET /bootcamp-repos 
-GET /bootcamp-repos?type=project  
-GET /bootcamp-repos/:slug 
+- `GET /bootcamp-repos`
+- `GET /bootcamp-repos?type=project`
+- `GET /bootcamp-repos/:slug`
 
 ---
 
