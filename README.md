@@ -72,9 +72,9 @@ Asegúrate de tener el backend levantado en local o desplegado para que las peti
 
 Ejemplo de endpoints utilizados:
 
-GET /bootcamp-repos
-GET /bootcamp-repos?type=project
-GET /bootcamp-repos/:slug
+GET /bootcamp-repos 
+GET /bootcamp-repos?type=project  
+GET /bootcamp-repos/:slug 
 
 ---
 
