@@ -32,22 +32,22 @@ function RepoDetail() {
   return (
     <main className={styles.repoDetail}>
       <section className={`${styles.section} ${styles.repoDetailHeading}`}>
-        <h1>{repo.title}</h1>
-        <p>{repo.description}</p>
+        <h1>{repo.title?.es}</h1>
+        <p>{repo.description?.es}</p>
       </section>
 
       <section className={`${styles.section} ${styles.takeaways}`}>
         <h3>Takeaways</h3>
         <ul className={styles.takeawaysList}>
           {repo.takeaways?.map((takeaway, takeawayIndex) => (
-            <li key={takeawayIndex}>{takeaway}</li>
+            <li key={takeawayIndex}>{takeaway.es}</li>
           ))}
         </ul>
       </section>
 
       <section className={`${styles.section} ${styles.keyLearning}`}>
         <h3>Aprendizaje clave</h3>
-        <p>{repo.keyLearning}</p>
+        <p>{repo.keyLearning?.es}</p>
       </section>
 
       <section className={`${styles.section} ${styles.techStack}`}>
@@ -67,7 +67,7 @@ function RepoDetail() {
         </a>
         {repo.urlApp && (
           <a href={repo.urlApp} target="_blank" className={styles.btnPrimary}>
-              Link App <img src={linkExt} alt="Link Externo" width={16} />
+            Link App <img src={linkExt} alt="Link Externo" width={16} />
           </a>
         )}
       </section>

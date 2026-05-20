@@ -5,14 +5,14 @@ import linkExt from "../../assets/linkExt_white.svg";
 function RepoCard({repo}) {
   return (
     <article className={styles.repoCard}>
-      <h3>{repo.title}</h3>
-      <p>{repo.summary}</p>
+      <h3>{repo.title?.es}</h3>
+      <p>{repo.summary?.es}</p>
 
       <div className="divider"></div>
       
       <div className={styles.keyLearning}>
         <h4>Aprendizaje clave</h4>
-        <p>{repo.keyLearning}</p>
+        <p>{repo.keyLearning?.es}</p>
       </div>
       
       <div className="divider"></div>

@@ -46,10 +46,17 @@ function Home() {
   }, [type, urlRepo]);
 
   const filteredRepos = repos.filter((repo) => {
-    const { title, summary, description, tags, keyLearning, takeaways } = repo;
-    const searchString = `${title.toLowerCase()} ${summary.toLowerCase()} ${description.toLowerCase()} ${tags.toString().toLowerCase()} ${keyLearning.toLowerCase()} ${takeaways.toString().toLowerCase()}}`;
+    const searchString = `
+    ${repo.title?.es || ''}
+    ${repo.summary?.es || ''}
+    ${repo.description?.es || ''}
+    ${repo.tags?.join(' ') || ''}
+    ${repo.keyLearning?.es || ''}
+    ${repo.takeaways?.map((takeaway) => takeaway.es).join(' ') || ''}
+  `.toLowerCase();
+
     return searchString.includes(searchRepo.toLowerCase());
-  })
+  });
   
   const handleChange = (e) => {
     setSearchRepo(e.target.value)
